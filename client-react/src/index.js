@@ -13,6 +13,17 @@ import ResetPassword from './screens/ResetPassword.jsx';
 import PrivateRoute from './Routes/PrivateRoute';
 import AdminRoute from './Routes/AdminRoute';
 import 'react-toastify/dist/ReactToastify.css';
+
+
+
+
+import "bootstrap/dist/css/bootstrap.css";
+import "assets/scss/paper-dashboard.scss?v=1.2.0";
+import "assets/demo/demo.css";
+import "perfect-scrollbar/css/perfect-scrollbar.css";
+
+import AdminLayout from "layouts/Admin.js";
+
 ReactDOM.render(
   <BrowserRouter>
     <Switch>
@@ -23,7 +34,11 @@ ReactDOM.render(
       <Route path='/users/password/reset/:token' exact render={props => <ResetPassword {...props} />} />
       <Route path='/users/activate/:token' exact render={props => <Activate {...props} />} />
       <PrivateRoute path="/private" exact component={Private} />
-       <AdminRoute path="/admin" exact component={Admin} />
+       {/*<AdminRoute path="/admin" exact component={Admin} />*/}
+
+
+        <AdminRoute path="/admin" component={(props) => <AdminLayout {...props} />} />
+
       <Redirect to='/' />
     </Switch>
   </BrowserRouter>,

@@ -36,7 +36,9 @@ import {
   Input,
 } from "reactstrap";
 
+import {signout} from "../../helpers/auth";
 import routes from "routes.js";
+import {toast} from "react-toastify";
 
 class Header extends React.Component {
   constructor(props) {
@@ -182,7 +184,12 @@ class Header extends React.Component {
                   </p>
                 </DropdownToggle>
                 <DropdownMenu right>
-                  <DropdownItem tag="a">Logout</DropdownItem>
+                  <DropdownItem  onClick={() => {
+                    signout(() => {
+                      toast.error('Signout Successfully');
+                      this.props.history.push('/');
+                    });
+                  }} tag="a">Logout</DropdownItem>
                   {/* <DropdownItem tag="a">Another Action</DropdownItem>
                   <DropdownItem tag="a">Something else here</DropdownItem>*/}
                 </DropdownMenu>
