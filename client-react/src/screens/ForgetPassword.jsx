@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import authSvg from '../assests/forget.svg';
+import authSvg from '../assets/forget.svg';
 import { ToastContainer, toast } from 'react-toastify';
 import axios from 'axios';
 
@@ -21,13 +21,13 @@ const ForgetPassword = ({history}) => {
           email
         })
         .then(res => {
-          
+
             setFormData({
               ...formData,
               email: '',
             });
             toast.success(`Please check your email`);
-          
+
         })
         .catch(err => {
         console.log(err.response)
@@ -47,7 +47,7 @@ const ForgetPassword = ({history}) => {
               Forget Password
             </h1>
             <div className='w-full flex-1 mt-8 text-indigo-500'>
-              
+
               <form
                 className='mx-auto max-w-xs relative '
                 onSubmit={handleSubmit}

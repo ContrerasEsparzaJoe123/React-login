@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import authSvg from '../assests/reset.svg';
+import authSvg from '../assets/reset.svg';
 import { ToastContainer, toast } from 'react-toastify';
 import axios from 'axios';
 const ResetPassword = ({match}) => {
@@ -10,13 +10,13 @@ const ResetPassword = ({match}) => {
     textChange: 'Submit'
   });
     const { password1, password2, textChange, token } = formData;
-    
+
     useEffect(() => {
         let token = match.params.token
         if(token) {
             setFormData({...formData, token,})
         }
-        
+
     }, [])
   const handleChange = text => e => {
     setFormData({ ...formData, [text]: e.target.value });
@@ -39,7 +39,7 @@ const ResetPassword = ({match}) => {
               password2: ''
             });
             toast.success(res.data.message);
-          
+
         })
         .catch(err => {
           toast.error('Something is wrong try again');
@@ -58,7 +58,7 @@ const ResetPassword = ({match}) => {
               Reset Your Password
             </h1>
             <div className='w-full flex-1 mt-8 text-indigo-500'>
-              
+
               <form
                 className='mx-auto max-w-xs relative '
                 onSubmit={handleSubmit}

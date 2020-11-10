@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import authSvg from '../assests/welcome.svg';
+import authSvg from '../assets/welcome.svg';
 import { ToastContainer, toast } from 'react-toastify';
 import axios from 'axios';
 import jwt from 'jsonwebtoken';
@@ -41,7 +41,7 @@ const Activate = ({ match }) => {
         toast.success(res.data.message);
       })
       .catch(err => {
-        
+
         toast.error(err.response.data.errors);
       });
   };
