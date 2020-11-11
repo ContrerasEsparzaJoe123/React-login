@@ -2,6 +2,8 @@ import React from 'react';
 import { Link, Redirect } from 'react-router-dom';
 import { signout } from './helpers/auth';
 import { ToastContainer, toast } from 'react-toastify';
+import logo from './assets/icon-png-images-6.png'
+import styles from "./LandingPage/LandingPage.module.css";
 
 function App({ history }) {
   return (
@@ -10,14 +12,14 @@ function App({ history }) {
       <div className='max-w-screen-xl m-0 sm:m-20 bg-white shadow sm:rounded-lg flex justify-center flex-1'>
         <div className='lg:w-1/2 xl:w-8/12 p-6 sm:p-12'>
           <div className='mt-12 flex flex-col items-center'>
+            <img src={logo} className={styles.logo} alt="logo" />
             <h1 className='text-2xl xl:text-2xl font-extrabold  text-center '>
-              Ultimate Auth with Email & Facebook & Google with diferent roles,
-              email verification & Forget passwored{' '}
+              Restaurantes{' '}
             </h1>
             <div className='w-full flex-1 mt-8 text-indigo-500'>
               <div className='my-12 border-b text-center'>
                 <div className='leading-none px-2 inline-block text-sm text-gray-600 tracking-wide font-medium bg-white transform translate-y-1/2'>
-                  Features
+                  Acciones
                 </div>
               </div>
               <div className='mx-auto max-w-xs relative '>
@@ -26,14 +28,14 @@ function App({ history }) {
                   className='mt-5 tracking-wide font-semibold bg-indigo-500 text-gray-100 w-full py-4 rounded-lg hover:bg-indigo-700 transition-all duration-300 ease-in-out flex items-center justify-center focus:shadow-outline focus:outline-none'
                 >
                   <i className='fas fa-sign-in-alt  w-6  -ml-2' />
-                  <span className='ml-3'>Sign In</span>
+                  <span className='ml-3'>Iniciar Sesion</span>
                 </Link>
                 <Link
                   to='/register'
                   className='mt-5 tracking-wide font-semibold bg-gray-500 text-gray-100 w-full py-4 rounded-lg hover:bg-gray-700 transition-all duration-300 ease-in-out flex items-center justify-center focus:shadow-outline focus:outline-none'
                 >
                   <i className='fas fa-user-plus  w-6  -ml-2' />
-                  <span className='ml-3'>Sign Up</span>
+                  <span className='ml-3'>Crear Cuenta</span>
                 </Link>
                 <Link
                   to='/private'
@@ -59,7 +61,7 @@ function App({ history }) {
                   className='mt-5 tracking-wide font-semibold bg-pink-500 text-gray-100 w-full py-4 rounded-lg hover:bg-pink-700 transition-all duration-300 ease-in-out flex items-center justify-center focus:shadow-outline focus:outline-none'
                 >
                   <i className='fas fa-sign-out-alt  w-6  -ml-2' />
-                  <span className='ml-3'>Signout</span>
+                  <span className='ml-3'>Cerrar Sesion</span>
                 </button>
               </div>
             </div>

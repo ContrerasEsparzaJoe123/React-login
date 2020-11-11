@@ -105,7 +105,7 @@ export default class StudentList extends Component {
               <Card className="card-plain">
                 <CardHeader>
                   <CardTitle tag="h4">Tabla de Restaurantes</CardTitle>
-                  <p className="card-category">Restaurantes en Durango</p>
+                  {/*<p className="card-category">Restaurantes en Durango</p>*/}
                 </CardHeader>
                 <CardBody>
                   <Table responsive>
@@ -113,8 +113,8 @@ export default class StudentList extends Component {
                       <tr>
                         <th>Nombre</th>
                         <th>Calificacion</th>
-                        <th>Direccion</th>
-                        <th width="320">Url de Imagen</th>
+                        <th width="280">Direccion</th>
+                        <th >Url de Imagen</th>
                         <th>Longitud</th>
                         <th>Latitud</th>
                         <th>Descripcion</th>

@@ -14,8 +14,11 @@ import PrivateRoute from './Routes/PrivateRoute';
 import AdminRoute from './Routes/AdminRoute';
 import 'react-toastify/dist/ReactToastify.css';
 
+import 'bulma/css/bulma.css';
 
-
+import LandingPage from "./LandingPage/LandingPage";
+import Search from "./Search/Search";
+import EditStudent from "./components/edit-student.component";
 
 import "bootstrap/dist/css/bootstrap.css";
 import "assets/scss/paper-dashboard.scss?v=1.2.0";
@@ -33,7 +36,9 @@ ReactDOM.render(
       <Route path='/users/password/forget' exact render={props => <ForgetPassword {...props} />} />
       <Route path='/users/password/reset/:token' exact render={props => <ResetPassword {...props} />} />
       <Route path='/users/activate/:token' exact render={props => <Activate {...props} />} />
-      <PrivateRoute path="/private" exact component={Private} />
+      <PrivateRoute path="/private"  component={LandingPage} />
+      <PrivateRoute path="/search"  component={Search} />
+      <AdminRoute path="/edit-student/:id"  component={EditStudent} />
        {/*<AdminRoute path="/admin" exact component={Admin} />*/}
 
 

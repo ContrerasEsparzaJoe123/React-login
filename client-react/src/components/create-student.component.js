@@ -230,7 +230,7 @@ export default class CreateStudent extends Component {
                           color="primary"
                           type="submit"
                         >
-                          Update Profile
+                          Crear Restaurante
                         </Button>
                       </div>
                     </Row>

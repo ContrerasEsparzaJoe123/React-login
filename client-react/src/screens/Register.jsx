@@ -69,7 +69,7 @@ const Register = () => {
         <div className='lg:w-1/2 xl:w-5/12 p-6 sm:p-12'>
           <div className='mt-12 flex flex-col items-center'>
             <h1 className='text-2xl xl:text-3xl font-extrabold'>
-              Sign Up for Congar
+             Crear Cuenta
             </h1>
 
             <form
@@ -80,28 +80,28 @@ const Register = () => {
                 <input
                   className='w-full px-8 py-4 rounded-lg font-medium bg-gray-100 border border-gray-200 placeholder-gray-500 text-sm focus:outline-none focus:border-gray-400 focus:bg-white'
                   type='text'
-                  placeholder='Name'
+                  placeholder='Nombre'
                   onChange={handleChange('name')}
                   value={name}
                 />
                 <input
                   className='w-full px-8 py-4 rounded-lg font-medium bg-gray-100 border border-gray-200 placeholder-gray-500 text-sm focus:outline-none focus:border-gray-400 focus:bg-white mt-5'
                   type='email'
-                  placeholder='Email'
+                  placeholder='Correo Electronico'
                   onChange={handleChange('email')}
                   value={email}
                 />
                 <input
                   className='w-full px-8 py-4 rounded-lg font-medium bg-gray-100 border border-gray-200 placeholder-gray-500 text-sm focus:outline-none focus:border-gray-400 focus:bg-white mt-5'
                   type='password'
-                  placeholder='Password'
+                  placeholder='Contraseña'
                   onChange={handleChange('password1')}
                   value={password1}
                 />
                 <input
                   className='w-full px-8 py-4 rounded-lg font-medium bg-gray-100 border border-gray-200 placeholder-gray-500 text-sm focus:outline-none focus:border-gray-400 focus:bg-white mt-5'
                   type='password'
-                  placeholder='Confirm Password'
+                  placeholder='Confirmar Contraseña'
                   onChange={handleChange('password2')}
                   value={password2}
                 />
@@ -115,7 +115,7 @@ const Register = () => {
               </div>
               <div className='my-12 border-b text-center'>
                 <div className='leading-none px-2 inline-block text-sm text-gray-600 tracking-wide font-medium bg-white transform translate-y-1/2'>
-                  Or sign with email or social login
+                  Inicia Sesion con Google o Facebook
                 </div>
               </div>
               <div className='flex flex-col items-center'>
@@ -126,7 +126,7 @@ const Register = () => {
                   target='_self'
                 >
                   <i className='fas fa-sign-in-alt fa 1x w-6  -ml-2 text-indigo-500' />
-                  <span className='ml-4'>Sign In</span>
+                  <span className='ml-4'>Inicia Sesion</span>
                 </a>
               </div>
             </form>

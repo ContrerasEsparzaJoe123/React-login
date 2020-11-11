@@ -114,7 +114,8 @@ export default class EditStudent extends Component {
       });
 
     // Redirect to Student List
-    this.props.history.push("/student-list");
+    // this.props.history.push("/student-list");
+    window.location.href="admin/student-list"
 
     this.refresh();
   }
@@ -258,7 +259,7 @@ export default class EditStudent extends Component {
                           color="primary"
                           type="submit"
                         >
-                          Update Profile
+                          Update Restaurante
                         </Button>
                       </div>
                     </Row>
