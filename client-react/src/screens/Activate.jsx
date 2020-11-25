@@ -54,7 +54,7 @@ const Activate = ({ match }) => {
         <div className='lg:w-1/2 xl:w-5/12 p-6 sm:p-12'>
           <div className='mt-12 flex flex-col items-center'>
             <h1 className='text-2xl xl:text-3xl font-extrabold'>
-              Welcome {name}
+              Bienvenido {name}
             </h1>
 
             <form
@@ -67,12 +67,12 @@ const Activate = ({ match }) => {
                   className='mt-5 tracking-wide font-semibold bg-indigo-500 text-gray-100 w-full py-4 rounded-lg hover:bg-indigo-700 transition-all duration-300 ease-in-out flex items-center justify-center focus:shadow-outline focus:outline-none'
                 >
                   <i className='fas fa-user-plus fa 1x w-6  -ml-2' />
-                  <span className='ml-3'>Activate your Account</span>
+                  <span className='ml-3'>Activa tu Cuenta</span>
                 </button>
               </div>
               <div className='my-12 border-b text-center'>
                 <div className='leading-none px-2 inline-block text-sm text-gray-600 tracking-wide font-medium bg-white transform translate-y-1/2'>
-                  Or sign up again
+                 O Registrate de nuevo
                 </div>
               </div>
               <div className='flex flex-col items-center'>
