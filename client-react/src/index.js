@@ -19,6 +19,7 @@ import 'bulma/css/bulma.css';
 import LandingPage from "./LandingPage/LandingPage";
 import Search from "./Search/Search";
 import EditStudent from "./components/edit-student.component";
+import EditOferta from "./components/edit-oferta.component";
 
 import "bootstrap/dist/css/bootstrap.css";
 import "assets/scss/paper-dashboard.scss?v=1.2.0";
@@ -39,6 +40,7 @@ ReactDOM.render(
       <PrivateRoute path="/private"  component={LandingPage} />
       <PrivateRoute path="/search"  component={Search} />
       <AdminRoute path="/edit-student/:id"  component={EditStudent} />
+      <AdminRoute path="/edit-oferta/:id"  component={EditOferta} />
        {/*<AdminRoute path="/admin" exact component={Admin} />*/}
 
 

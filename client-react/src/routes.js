@@ -1,21 +1,3 @@
-/*!
-
-=========================================================
-* Paper Dashboard React - v1.2.0
-=========================================================
-
-* Product Page: https://www.creative-tim.com/product/paper-dashboard-react
-* Copyright 2020 Creative Tim (https://www.creative-tim.com)
-
-* Licensed under MIT (https://github.com/creativetimofficial/paper-dashboard-react/blob/master/LICENSE.md)
-
-* Coded by Creative Tim
-
-=========================================================
-
-* The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
-
-*/
 import Dashboard from "views/Dashboard.js";
 import Notifications from "views/Notifications.js";
 import Icons from "views/Icons.js";
@@ -24,6 +6,8 @@ import TableList from "views/Tables.js";
 import Maps from "views/Map.js";
 import UserPage from "views/User.js";
 import AddRes from "components/create-student.component";
+import AddOferta from 'components/create-oferta.component'
+import ListOferta from 'components/oferta-list.component'
 import listRes from "components/student-list.component";
 import editRes from "components/edit-student.component";
 import UpgradeToPro from "views/Upgrade.js";
@@ -44,19 +28,19 @@ var routes = [
     layout: "/admin",
   },
   {
-    path: "/student-list/",
-    name: "Usuarios",
+    path: "/create-oferta/",
+    name: "Crear Ofertas",
     icon: "nc-icon nc-single-02",
-    component: listRes,
+    component: AddOferta,
     layout: "/admin",
   },
-  /*{
-    path: "/icons",
-    name: "Icons",
+  {
+    path: "/oferta-list",
+    name: "Lista de Ofertas",
     icon: "nc-icon nc-diamond",
-    component: Icons,
+    component: ListOferta,
     layout: "/admin",
-  },*/
+  },
   {
     path: "/maps",
     name: "Maps",
