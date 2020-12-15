@@ -24,7 +24,7 @@ import { Route, Switch } from "react-router-dom";
 import DemoNavbar from "components/Navbars/DemoNavbar.js";
 import Footer from "components/Footer/Footer.js";
 import Sidebar from "components/Sidebar/Sidebar.js";
-// import FixedPlugin from "components/FixedPlugin/FixedPlugin.js";
+import FixedPlugin from "components/FixedPlugin/FixedPlugin.js";
 
 import routes from "routes.js";
 
@@ -34,7 +34,7 @@ class Dashboard extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      backgroundColor: "white",
+      backgroundColor: "black",
       activeColor: "info",
     };
     this.mainPanel = React.createRef();
@@ -87,12 +87,12 @@ class Dashboard extends React.Component {
           </Switch>
           <Footer fluid />
         </div>
-        {/*<FixedPlugin*/}
-        {/*  bgColor={this.state.backgroundColor}*/}
-        {/*  activeColor={this.state.activeColor}*/}
-        {/*  handleActiveClick={this.handleActiveClick}*/}
-        {/*  handleBgClick={this.handleBgClick}*/}
-        {/*/>*/}
+        <FixedPlugin
+          bgColor={this.state.backgroundColor}
+          activeColor={this.state.activeColor}
+          handleActiveClick={this.handleActiveClick}
+          handleBgClick={this.handleBgClick}
+        />
       </div>
     );
   }

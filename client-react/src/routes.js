@@ -6,10 +6,10 @@ import TableList from "views/Tables.js";
 import Maps from "views/Map.js";
 import UserPage from "views/User.js";
 import AddRes from "components/create-student.component";
-import AddOferta from 'components/create-oferta.component'
-import ListOferta from 'components/oferta-list.component'
+import AddOferta from "components/create-oferta.component";
+import ListOferta from "components/oferta-list.component";
 import listRes from "components/student-list.component";
-import editRes from "components/edit-student.component";
+import Map from "views/LandingPage";
 import UpgradeToPro from "views/Upgrade.js";
 
 var routes = [
@@ -30,14 +30,14 @@ var routes = [
   {
     path: "/create-oferta/",
     name: "Crear Ofertas",
-    icon: "nc-icon nc-single-02",
+    icon: "nc-icon nc-bag-16",
     component: AddOferta,
     layout: "/admin",
   },
   {
     path: "/oferta-list",
     name: "Lista de Ofertas",
-    icon: "nc-icon nc-diamond",
+    icon: "nc-icon nc-bullet-list-67",
     component: ListOferta,
     layout: "/admin",
   },
@@ -45,7 +45,7 @@ var routes = [
     path: "/maps",
     name: "Maps",
     icon: "nc-icon nc-pin-3",
-    component: Maps,
+    component: Map,
     layout: "/admin",
   },
   /*

@@ -1,20 +1,20 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import { BrowserRouter, Route, Redirect, Switch } from 'react-router-dom';
-import App from './App.jsx';
-import Login from './screens/Login.jsx';
-import Register from './screens/Register.jsx';
-import Activate from './screens/Activate.jsx';
-import Private from './screens/Private.jsx';
-import Admin from './screens/Admin.jsx';
-import ForgetPassword from './screens/ForgetPassword.jsx';
-import ResetPassword from './screens/ResetPassword.jsx';
+import React from "react";
+import ReactDOM from "react-dom";
+import { BrowserRouter, Route, Redirect, Switch } from "react-router-dom";
+import App from "./App.jsx";
+import Login from "./screens/Login.jsx";
+import Register from "./screens/Register.jsx";
+import Activate from "./screens/Activate.jsx";
+import Private from "./screens/Private.jsx";
+import Admin from "./screens/Admin.jsx";
+import ForgetPassword from "./screens/ForgetPassword.jsx";
+import ResetPassword from "./screens/ResetPassword.jsx";
 
-import PrivateRoute from './Routes/PrivateRoute';
-import AdminRoute from './Routes/AdminRoute';
-import 'react-toastify/dist/ReactToastify.css';
+import PrivateRoute from "./Routes/PrivateRoute";
+import AdminRoute from "./Routes/AdminRoute";
+import "react-toastify/dist/ReactToastify.css";
 
-import 'bulma/css/bulma.css';
+import "bulma/css/bulma.css";
 
 import LandingPage from "./LandingPage/LandingPage";
 import Search from "./Search/Search";
@@ -31,23 +31,41 @@ import AdminLayout from "layouts/Admin.js";
 ReactDOM.render(
   <BrowserRouter>
     <Switch>
-      <Route path='/' exact render={props => <App {...props} />} />
-      <Route path='/login' exact render={props => <Login {...props} />} />
-      <Route path='/register' exact render={props => <Register {...props} />} />
-      <Route path='/users/password/forget' exact render={props => <ForgetPassword {...props} />} />
-      <Route path='/users/password/reset/:token' exact render={props => <ResetPassword {...props} />} />
-      <Route path='/users/activate/:token' exact render={props => <Activate {...props} />} />
-      <PrivateRoute path="/private"  component={LandingPage} />
-      <PrivateRoute path="/search"  component={Search} />
-      <AdminRoute path="/edit-student/:id"  component={EditStudent} />
-      <AdminRoute path="/edit-oferta/:id"  component={EditOferta} />
-       {/*<AdminRoute path="/admin" exact component={Admin} />*/}
+      <Route path="/" exact render={(props) => <App {...props} />} />
+      <Route path="/login" exact render={(props) => <Login {...props} />} />
+      <Route
+        path="/register"
+        exact
+        render={(props) => <Register {...props} />}
+      />
+      <Route
+        path="/users/password/forget"
+        exact
+        render={(props) => <ForgetPassword {...props} />}
+      />
+      <Route
+        path="/users/password/reset/:token"
+        exact
+        render={(props) => <ResetPassword {...props} />}
+      />
+      <Route
+        path="/users/activate/:token"
+        exact
+        render={(props) => <Activate {...props} />}
+      />
+      <PrivateRoute path="/private" component={LandingPage} />
+      <PrivateRoute path="/search" component={Search} />
+      <AdminRoute path="/edit-student/:id" component={EditStudent} />
+      <AdminRoute path="/edit-oferta/:id" component={EditOferta} />
+      {/*<AdminRoute path="/admin" exact component={Admin} />*/}
 
+      <AdminRoute
+        path="/admin"
+        component={(props) => <AdminLayout {...props} />}
+      />
 
-        <AdminRoute path="/admin" component={(props) => <AdminLayout {...props} />} />
-
-      <Redirect to='/' />
+      <Redirect to="/" />
     </Switch>
   </BrowserRouter>,
-  document.getElementById('root')
+  document.getElementById("root")
 );
